@@ -2,7 +2,7 @@
 Theme Name: SeDAS
 Theme URI: https://github.com/okfn/sedas-wordpress
 Description: xlander child theme, with customisations for sedas.satapps.org.
-Version: 0.4
+Version: 0.5
 Author: Sam Smith, for Open Knowledge
 Author URI: http://services.okfn.org/
 Template: xlander
@@ -24,9 +24,13 @@ Template: xlander
 #wt_containerWrapp > section:nth-child(even) {
   background-color: #f5f5f5; }
 
+#wt_home_content .btn {
+  display: block;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif; }
 #wt_home_content .intro_buttons .btn {
   padding: 12px 25px;
-  font-size: 24px; }
+  font-size: 24px;
+  font-family: Oswald; }
 #wt_home_content .secondary-link {
   color: #fff;
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
