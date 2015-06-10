@@ -2,7 +2,7 @@
 Theme Name: SeDAS
 Theme URI: https://github.com/okfn/sedas-wordpress
 Description: xlander child theme, with customisations for sedas.satapps.org.
-Version: 0.7
+Version: 0.8
 Author: Sam Smith, for Open Knowledge
 Author URI: http://services.okfn.org/
 Template: xlander
@@ -40,8 +40,25 @@ Template: xlander
 
 #wt_home_content {
   .btn {
-    display:block;
     font-family:"Open Sans",Helvetica,Arial,sans-serif;
+    opacity:0.9;
+    
+    span {
+      display:block;
+      text-transform:lowercase;
+      font-size:11px;
+      font-weight:normal;
+      line-height:1.1;
+      opacity:0.9;
+    }
+    
+    &.grey {
+      background-color:#262626;
+      
+      &:hover {
+        background-color: rgba(38,38,38,0.75)
+      }
+    }
   }
   
   .intro_buttons {
@@ -64,15 +81,19 @@ Template: xlander
     .rev_slider {
       overflow:hidden;
       
+      .tp-bgimg {
+        background-size:cover !important;
+      }
+      
       .side-panel {
         display:none;
         background-color: rgba(255,255,255,0.96);
         width:260px;
         height: 601px;
-        padding-top:31px;
+        padding-top:21px;
         position: absolute;
-        left: -362px;
-        top: -100px;
+        left: -262px;
+        top: 0;
         white-space:normal;
         -webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.75);
@@ -98,9 +119,22 @@ Template: xlander
         }
         
         & > section {
-          height:190px;
           padding:28px 24px;
           position:relative;
+          
+          &.third {
+            height:190px;
+          
+            &:after {
+              content:'';
+              display:block;
+              width:220px;
+              height:1px;
+              background-color:#DFDFDF;
+              position:absolute;
+              bottom:0;
+            }
+          }
           
           h4 {
             text-transform:uppercase;
@@ -122,14 +156,8 @@ Template: xlander
             }
           }
           
-          &:after {
-            content:'';
-            display:block;
-            width:220px;
-            height:1px;
-            background-color:#DFDFDF;
-            position:absolute;
-            bottom:0;
+          img {
+            width:100%;
           }
         }
         
@@ -160,10 +188,37 @@ Template: xlander
         }
         
         &:hover {
-          left: -100px;
+          left: 0;
           
           .panel-icon {
             left:0;
+          }
+        }
+        
+        &.right {
+          left: auto;
+          right: -272px;
+          -webkit-transition: right 0.7s ease-in-out;
+          -moz-transition: right 0.7s ease-in-out;
+          -ms-transition: right 0.7s ease-in-out;
+          -o-transition: right 0.7s ease-in-out;
+          transition: right 0.7s ease-in-out;
+          -webkit-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.75);
+          box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.75);
+          
+          .panel-icon {
+            left:-82px;
+            padding-left:0;
+            padding-right:82px;
+          }
+          
+          &:hover {
+            right: -10px;
+            
+            .panel-icon {
+              left:160px;
+            }
           }
         }
         
@@ -231,6 +286,7 @@ Template: xlander
   position:relative;
   
   #wt_footerBottom {
+    background-image:none;
     
     .col-md-12 {
       position:static;
