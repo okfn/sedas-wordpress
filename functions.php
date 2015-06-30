@@ -6,8 +6,43 @@ function theme_enqueue_child_style(){
 add_action('wp_print_styles', 'theme_enqueue_child_style');
 
 
+//Side Panel
+function sidepanel_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'side' => 'left',
+    'icon' => 'tools',
+	), $atts );
+  if ( esc_attr($a['side']) == 'right') { $class = ' right'; }
+
+	return '<div class="side-panel' . $class . '">' . do_shortcode($content) . '<span class="panel-icon"><span class="entypo-' . esc_attr($a['icon']) . '"></span></span></div>';
+}
+add_shortcode( 'sidepanel', 'sidepanel_shortcode' );
+
+
+// Tools
+function tool_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'title' => '',
+    'link' => '',
+	), $atts );
+  
+  $tool = '<section class="third">';
+  if (esc_attr($a['title'])) {
+    $tool .= '<h4>' . esc_attr($a['title']) . '</h4>';
+  }
+  $tool .= '<p>' . $content . '</p>';
+  if (esc_attr($a['link'])) {
+    $tool .= '<a class="more" href="' . esc_attr($a['link']) . '" rel="external"><span class="entypo-popup"></span>Read More</a>';
+  }
+  $tool .= '</section>';
+  
+	return $tool;
+}
+add_shortcode( 'tool', 'tool_shortcode' );
+
+
 // Image of the month
-function imgmonth_func( $atts ) {
+function imgmonth_shortcode( $atts ) {
     $a = shortcode_atts( array(
         'width' => '300',
         'height' => '241',
@@ -29,7 +64,7 @@ function imgmonth_func( $atts ) {
       <p>'.$image_description.'</p>
       <a href="'.$image.'">See full image</a>
     </section>
-    <span class="panel-icon"><span class="entypo-picture"></span></span>
+
    ';
 }
-add_shortcode( 'imgmonth', 'imgmonth_func' );
+add_shortcode( 'imgmonth', 'imgmonth_shortcode' );
