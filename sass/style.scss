@@ -49,30 +49,33 @@ body.wt_image_bg #wt_section_home,
   }
   
   #wt_home_content {
-    padding:0;
+    padding:20px 0;
     
     .container {
       height:100%;
     }
     .row {
-      display:table;
-      width:100%;
-      height:100%;
       margin:0;
-      
-      .wt-row-container:first-child {
-        display:table-cell;
-        vertical-align:middle;
-        width:100%;
-      }
       
       .wt-row-container:last-child {
         position:static;
       }
+      
+      @media (min-width: 1200px) {
+        display:table;
+        width:100%;
+        height:100%;
+       
+        .wt-row-container:first-child {
+          display:table-cell;
+          vertical-align:middle;
+          width:100%;
+        }
+      }
     }
     
     .wt_section_heading {
-      margin-bottom:15px;
+      margin:0;
       
       &:after {
         display:none;
@@ -107,6 +110,7 @@ body.wt_image_bg #wt_section_home,
   .btn {
     font-family:"Open Sans",Helvetica,Arial,sans-serif;
     opacity:0.9;
+    margin: 15px 0 0 0;
     
     span {
       display:block;

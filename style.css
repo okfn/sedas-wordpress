@@ -39,27 +39,30 @@ body.wt_image_bg #wt_section_home,
     z-index: -1; }
   body.wt_image_bg #wt_section_home #wt_home_content,
   .home #wt_home_content {
-    padding: 0; }
+    padding: 20px 0; }
     body.wt_image_bg #wt_section_home #wt_home_content .container,
     .home #wt_home_content .container {
       height: 100%; }
     body.wt_image_bg #wt_section_home #wt_home_content .row,
     .home #wt_home_content .row {
-      display: table;
-      width: 100%;
-      height: 100%;
       margin: 0; }
-      body.wt_image_bg #wt_section_home #wt_home_content .row .wt-row-container:first-child,
-      .home #wt_home_content .row .wt-row-container:first-child {
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%; }
       body.wt_image_bg #wt_section_home #wt_home_content .row .wt-row-container:last-child,
       .home #wt_home_content .row .wt-row-container:last-child {
         position: static; }
+      @media (min-width: 1200px) {
+        body.wt_image_bg #wt_section_home #wt_home_content .row,
+        .home #wt_home_content .row {
+          display: table;
+          width: 100%;
+          height: 100%; }
+          body.wt_image_bg #wt_section_home #wt_home_content .row .wt-row-container:first-child,
+          .home #wt_home_content .row .wt-row-container:first-child {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%; } }
     body.wt_image_bg #wt_section_home #wt_home_content .wt_section_heading,
     .home #wt_home_content .wt_section_heading {
-      margin-bottom: 15px; }
+      margin: 0; }
       body.wt_image_bg #wt_section_home #wt_home_content .wt_section_heading:after,
       .home #wt_home_content .wt_section_heading:after {
         display: none; }
@@ -88,7 +91,8 @@ body.wt_image_bg #wt_section_home,
   body.wt_image_bg #wt_section_home .btn,
   .home .btn {
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
-    opacity: 0.9; }
+    opacity: 0.9;
+    margin: 15px 0 0 0; }
     body.wt_image_bg #wt_section_home .btn span,
     .home .btn span {
       display: block;
