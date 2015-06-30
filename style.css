@@ -168,7 +168,8 @@ body.wt_image_bg #wt_section_home,
       .home #wt_home_content .side-panel section {
         padding: 28px 24px;
         position: relative;
-        background-color: #fff; }
+        background-color: #fff;
+        height: 100%; }
         body.wt_image_bg #wt_section_home #wt_home_content .side-panel section.third,
         .home #wt_home_content .side-panel section.third {
           height: 190px; }
