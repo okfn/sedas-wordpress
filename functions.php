@@ -62,7 +62,7 @@ function imgmonth_shortcode( $atts ) {
       <a href="'.$image.'"><img src="'.$thumb.'" alt=""></a>
       <p>'.$image_caption.'</p>
       <p>'.$image_description.'</p>
-      <a href="'.$image.'">See full image</a>
+      <a href="'.$image.'"><span class="entypo-picture"></span>See full image</a>
     </section>
 
    ';
