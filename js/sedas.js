@@ -6,6 +6,6 @@ jQuery(document).ready(function() {
   });
   
   //open custom menu links in new tab, if the url starts with http  
-  jQuery("#menu-main-menu .menu-item-type-custom a[href^='http']").attr("target","_blank");
+  jQuery(".menu .menu-item-type-custom a[href^='http']").attr("target","_blank");
   
 });
