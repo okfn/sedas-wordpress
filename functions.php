@@ -68,3 +68,15 @@ function imgmonth_shortcode( $atts ) {
    ';
 }
 add_shortcode( 'imgmonth', 'imgmonth_shortcode' );
+
+
+// Include JS.
+function my_scripts_method() {
+	wp_enqueue_script(
+		'sedas',
+		get_stylesheet_directory_uri() . '/js/sedas.js',
+		array( 'jquery' )
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
