@@ -28,8 +28,17 @@ function tool_shortcode( $atts, $content = null ) {
   
   $tool = '<section class="third">';
   if (esc_attr($a['title'])) {
-    $tool .= '<h4>' . esc_attr($a['title']) . '</h4>';
+    $tool .= '<h4>';
+    if (esc_attr($a['link'])) {
+      $tool .= '<a href="' . esc_attr($a['link']) . '" rel="external">';
+    }
+    $tool .= esc_attr($a['title']);
+    if (esc_attr($a['link'])) {
+      $tool .= '</a>';
+    }
+    $tool .= '</h4>';
   }
+  
   $tool .= '<p>' . $content . '</p>';
   if (esc_attr($a['link'])) {
     $tool .= '<a class="more" href="' . esc_attr($a['link']) . '" rel="external"><span class="entypo-popup"></span>Read More</a>';
