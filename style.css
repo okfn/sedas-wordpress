@@ -2,7 +2,7 @@
 Theme Name: SeDAS
 Theme URI: https://github.com/okfn/sedas-wordpress
 Description: xlander child theme, with customisations for sedas.satapps.org.
-Version: 1.3
+Version: 1.4
 Author: Sam Smith, for Open Knowledge
 Author URI: http://services.okfn.org/
 Template: xlander
@@ -302,9 +302,22 @@ body.wt_image_bg #wt_section_home,
     background-image: none; }
     #wt_footerWrapper #wt_footerBottom .col-md-12 {
       position: static; }
-      #wt_footerWrapper #wt_footerBottom .col-md-12 .widget {
-        position: absolute;
-        right: 0;
-        top: 50%; }
+      #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a {
+        cursor: default;
+        margin-top: 15px;
+        display: inline-block; }
+        #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a:link {
+          cursor: pointer; }
+        #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a img {
+          height: 64px; }
+        @media (min-width: 1300px) {
+          #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a:nth-of-type(-n+2) {
+            position: absolute;
+            top: 50%;
+            margin-top: 0; }
+          #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a:nth-of-type(1) {
+            left: 30px; }
+          #wt_footerWrapper #wt_footerBottom .col-md-12 .widget > div > a:nth-of-type(2) {
+            right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
